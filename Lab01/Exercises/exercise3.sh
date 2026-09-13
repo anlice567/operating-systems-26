@@ -1,3 +1,5 @@
+#!/bash/bin
+
 #Creation of the first folder
 mkdir folder1
 date
