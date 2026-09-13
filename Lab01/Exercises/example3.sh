@@ -1,3 +1,5 @@
+#!/bash/bin
+
 #nano allows to create a file and & adds this process to the background
 nano notes &
 #fg sends the process to the foreground
