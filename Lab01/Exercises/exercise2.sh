@@ -1,3 +1,5 @@
+#!/bash/bin
+
 #The command history is used to see the history of commands
 history > ~/week01/ex2.txt
 
