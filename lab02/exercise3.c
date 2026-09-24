@@ -18,7 +18,7 @@ int convert(int x, int s, int t) {
           digit = current_number % 10;
         
           if (digit >= s) {
-            printf("cannot convert.\n");
+            printf("Cannot convert.\n");
             return -1;
           }
           
