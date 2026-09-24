@@ -43,5 +43,4 @@ int convert(int x, int s, int t) {
 }
 int main() {
     printf("%d",convert(1234, 8, 2)); 
-    return 0;
 }
