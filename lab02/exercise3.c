@@ -8,9 +8,10 @@ int convert(int x, int s, int t) {
     
     else {
 
-      int current_number = x;
-      int decimal = 0;
-      int power = 1;
+      int current_number, decimal, power;
+      current_number = x;
+      decimal = 0;
+      power = 1;
 
       while (current_number > 0) {
           int digit;
@@ -26,8 +27,9 @@ int convert(int x, int s, int t) {
           current_number = current_number / 10;
       }
 
-      int result = 0;
-      int radix = 1;
+      int result, radix;
+      result = 0;
+      radix = 1;
 
       while (decimal > 0) {
         int remainder = decimal % t;
