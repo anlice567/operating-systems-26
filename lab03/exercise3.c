@@ -41,6 +41,6 @@ int main() {
         insert_node(val,arr,i);
     }
 
-    delete_node(arr,2);
+    delete_node(arr,1);
     print_list(arr);
 }
