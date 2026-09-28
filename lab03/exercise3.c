@@ -18,7 +18,7 @@ void insert_node(int value, struct Node arr[], int index) {
     if (index > 0) {
         arr[index-1].next = &arr[index];
     }
-    if (index == 2) {
+    if (index == size - 1) {
         arr[index].next = NULL;
     }
 }
