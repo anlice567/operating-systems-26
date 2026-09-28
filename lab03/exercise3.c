@@ -7,12 +7,6 @@ struct Node {
     struct Node* next;
 };
 
-void swap(struct Node* node1, struct Node* node2) {
-    struct Node temp = *node1;
-    *node1 = *node2;
-    *node2 = temp;
-}
-
 void insert_node(int value, struct Node arr[], int index) {
     arr[index].value = value;
     if (index > 0) {
@@ -24,14 +18,18 @@ void insert_node(int value, struct Node arr[], int index) {
 }
 
 void delete_node(struct Node arr[], int index) {
+    if (index == size - 1) {
+        arr[index-1].next = NULL;
+    }
     arr[index-1].next = &arr[index+1];
 }
 
 void print_list(struct Node arr[]) {
-    int i = 0;
-    while (arr[i].next != NULL) {
-        printf("%d ", arr[i].next->value);
-        i++;
+    struct Node elem = arr[0];
+    printf("%d ",elem.value);
+    while (elem.next != NULL) {
+        printf("%d ", elem.next->value);
+        elem = *elem.next;
     }
 }
 
@@ -43,6 +41,6 @@ int main() {
         insert_node(val,arr,i);
     }
 
-    delete_node(arr,1);
+    delete_node(arr,2);
     print_list(arr);
 }
