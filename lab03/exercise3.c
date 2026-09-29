@@ -21,7 +21,9 @@ void delete_node(struct Node arr[], int index) {
     if (index == size - 1) {
         arr[index-1].next = NULL;
     }
-    arr[index-1].next = &arr[index+1];
+    else {
+        arr[index-1].next = &arr[index+1];
+    }
 }
 
 void print_list(struct Node arr[]) {
