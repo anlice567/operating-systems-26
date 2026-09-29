@@ -30,11 +30,11 @@ void delete_node(struct Node arr[], int index) {
 }
 
 void print_list(struct Node arr[]) {
-    struct Node elem = arr[0];
-    printf("%d ",elem.value);
-    while (elem.next != NULL) {
-        printf("%d ", elem.next->value);
-        elem = *elem.next;
+    struct Node* elem = &arr[0];
+    printf("%d ",elem->value);
+    while (elem->next != NULL) {
+        printf("%d ", (elem->next)->value);
+        elem = elem->next;
     }
 }
 
@@ -46,6 +46,6 @@ int main() {
         insert_node(val,arr,i);
     }
 
-    delete_node(arr,0);
+    delete_node(arr,1);
     print_list(arr);
 }
