@@ -21,6 +21,9 @@ void delete_node(struct Node arr[], int index) {
     if (index == size - 1) {
         arr[index-1].next = NULL;
     }
+    else if (index == 0) {
+        arr[0] = arr[index+1];
+    }
     else {
         arr[index-1].next = &arr[index+1];
     }
@@ -43,6 +46,6 @@ int main() {
         insert_node(val,arr,i);
     }
 
-    delete_node(arr,1);
+    delete_node(arr,0);
     print_list(arr);
 }
