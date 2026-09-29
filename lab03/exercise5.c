@@ -12,13 +12,14 @@ void insert_node(int value, struct Node arr[], int index) {
     arr[index].value = value;
     if (index == 0) {
         arr[index].prev = NULL;
-    }
-    else if (index == size - 1) {
         arr[index].next = NULL;
+    }
+    if (index > 0) {
+        arr[index-1].next = &arr[index];
         arr[index].prev = &arr[index-1];
     }
-    else if (index > 0) {
-        arr[index-1].next = &arr[index];
+    if (index == size - 1) {
+        arr[index].next = NULL;
         arr[index].prev = &arr[index-1];
     }
 }
@@ -27,7 +28,7 @@ void delete_node(struct Node arr[], int index) {
     if (index == size - 1) {
         arr[index-1].next = NULL;
     }
-    else if (index == 0) {
+    if (index == 0) {
         arr[index+1].prev = NULL;
     }
     else {
@@ -45,7 +46,7 @@ void print_list(struct Node arr[]) {
     }
     printf("%d ",elem->value);
     while (elem->next != NULL) {
-        printf("%d ", elem->next->value);
+        printf("%d ", (elem->next)->value);
         elem = elem->next;
    }
 }
@@ -58,6 +59,6 @@ int main() {
         insert_node(val,arr,i);
     }
 
-    delete_node(arr,0);
+    delete_node(arr,2);
     print_list(arr);
 }
