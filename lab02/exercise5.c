@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-int tribonacci(int n) {
-    int t0,t1,t2,tn;
+long long tribonacci(int n) {
+    long long t0,t1,t2,tn;
     t0 = 0;
     t1 = 1;
     t2 = 1;
