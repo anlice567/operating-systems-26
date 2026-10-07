@@ -5,11 +5,17 @@
 int main(int argc, char* argv[]) {
     //input from command line, not from stdin
     int n = atoi(argv[1]);
+    
+    if (argc < 2) {
+        return 1;
+    }
 
     for (int i = 0; i < n; i++) {
         fork();
         sleep(5);
     }
+
+    return 0;
 }
 //gcc exercise2.c -o e42
 //./e42 5 & - the execution of the program is sent to the background with n = 5
