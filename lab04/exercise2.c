@@ -4,11 +4,10 @@
 #include <sys/wait.h>
 int main(int argc, char* argv[]) {
     //input from command line, not from stdin
-    int n = atoi(argv[1]);
-    
     if (argc < 2) {
         return 1;
     }
+    int n = atoi(argv[1]);
 
     for (int i = 0; i < n; i++) {
         fork();
