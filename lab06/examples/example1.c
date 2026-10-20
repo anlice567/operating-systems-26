@@ -8,3 +8,6 @@ int main() {
         printf("%s","Hello world!");
     }
 }
+//Firsly, we run the process in background by command: ./t > output.txt & (the output is redirected to the file output.txt)
+//In jobs we have: [1]+  Running, after applying kill -s SIGTERM 4748 it's terminated politely: [1]+  Terminated, so no need to send the signal SIGKILL.
+
